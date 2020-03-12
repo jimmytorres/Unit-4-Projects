@@ -46,7 +46,7 @@ function init(){
       stars[i].addEventListener("mouseenter", lightStars);
    }
 
-   document.getElementById("comment").addEventListener("keyup", Count);
+   document.getElementById("comment").addEventListener("keyup", updateCount);
 }
 //Allows user to light the stars when you hover over them
 function lightStars(e){
@@ -63,10 +63,14 @@ function lightStars(e){
    }
    document.getElementById("rating").value = starNumber + " stars";
 
-   stars.addEventListener("mouseleave", turnOffStars);
+   e.target.addEventListener("mouseleave", turnOffStars);
+   e.target.addEventListener("click", 
+   function(){
+      e.target.removeEventListener('mouseleave', turnOffStars)
+   })
+   ;
 
    
-   e.addEventListener("mouseleave", turnOffStars);
    
 }
  
@@ -79,16 +83,20 @@ function turnOffStars(){
    document.getElementById("rating").value = "";
 }
 
+//counts word within text box
 function updateCount(){
-   var commentText = document.getElementById("comment");
+   var commentText = document.getElementById("comment").value;
    var charCount = countCharacters(commentText);
    var wordCountBox = document.getElementById("wordCount");
+   wordCountBox.value =charCount + "/1000"
 
-   document.getElementById("wordCount").value = charCount / 1000;
-
+   //shows user if they have gone past 1000 characters
    if(charCount > 1000){
-      wordCount.style.color = "white";
-      wordCount.style.backgroundColor = "red";
+      wordCountBox.style.color = "white";
+      wordCountBox.style.backgroundColor = "red";
+   }else{
+      wordCountBox.style.color = "black";
+      wordCountBox.style.backgroundColor = "white";
    }
 }
 
