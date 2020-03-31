@@ -4,9 +4,11 @@
    Tutorial 11
    Case Problem 4
    
+
    Kidder Garden Layout Style Sheet
    
    Filename: kg_layout.css
+
 */
 
 
@@ -52,7 +54,7 @@ body section#main {
    webkit-flex-flow: row wrap;
    flex-flow: row wrap;
 }
-
+   
 p {
    font-size: 1.2em;
    line-height: 1.4em;
@@ -88,7 +90,7 @@ nav#top ul {
    background-color: white;
    height: 120px;
 }
-
+   
 nav#top ul li {
    -webkit-flex: 0 1 130px;
    flex: 0 1 130px;   
@@ -122,7 +124,7 @@ article {
    background-color: white;
 }
 
-
+   
 /* Aside  Styles */
 
 aside { 

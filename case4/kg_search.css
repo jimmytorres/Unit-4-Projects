@@ -8,6 +8,7 @@
    Search Game Style Sheet
    
    Filename: kg_search.css
+
 */
 
 
@@ -60,7 +61,7 @@ input#pickedLetters {
    margin: 10px auto;
    text-align: center;
 }
-
+   
 ul#wordSearchList {
    font-size: 1.3em;
    column-width: 100px;
@@ -68,4 +69,4 @@ ul#wordSearchList {
 
 ul#wordSearchList {
    line-height: 1.4em;
-} 
+}
