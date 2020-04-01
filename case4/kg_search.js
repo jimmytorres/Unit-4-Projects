@@ -8,8 +8,8 @@
    Wordsearch Game Script
    
    Filename: kg_search.js
-   Author: 
-   Date:   
+   Author: Jimmy Torres
+   Date: 3/31/20   
    
    
    Function List
@@ -24,6 +24,7 @@
       on the items in the list array
 
 */
+
 
 
 
